@@ -1,5 +1,5 @@
-function App() {
-  return <div className="App">Hi!</div>;
-}
+import Logo from './molecules/Logo';
+
+const App = () => <Logo></Logo>;
 
 export default App;
