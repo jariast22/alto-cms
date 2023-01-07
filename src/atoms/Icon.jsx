@@ -9,7 +9,7 @@ const icons = {
   'chevron-down': ChevronDown,
 };
 
-const Icon = ({ id, size, strokeWidth = 1, ...delegated }) => {
+const Icon = ({ id, size, strokeWidth = 1, ...props }) => {
   const Component = icons[id];
 
   if (!Component) {
@@ -22,7 +22,7 @@ const Icon = ({ id, size, strokeWidth = 1, ...delegated }) => {
         '--size': size + 'px',
         '--stroke-width': strokeWidth + 'px',
       }}
-      {...delegated}
+      {...props}
     >
       <Component color="currentColor" size={size} />
     </Wrapper>

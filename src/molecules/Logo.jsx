@@ -4,7 +4,7 @@ import Icon from '@/atoms/Icon';
 
 const Logo = () => (
   <Wrapper>
-    <Icon id={'pocket'} size={100}></Icon>
+    <Icon id={'pocket'} size={60}></Icon>
     Pocket Blogs
   </Wrapper>
 );
