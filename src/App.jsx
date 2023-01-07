@@ -1,5 +1,5 @@
-import Logo from './molecules/Logo';
+import NavBar from './organisms/NavBar';
 
-const App = () => <Logo></Logo>;
+const App = () => <NavBar></NavBar>;
 
 export default App;

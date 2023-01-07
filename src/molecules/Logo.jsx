@@ -1,5 +1,6 @@
-import Icon from '@/atoms/Icon';
 import styled from 'styled-components';
+
+import Icon from '@/atoms/Icon';
 
 const Logo = () => (
   <Wrapper>
