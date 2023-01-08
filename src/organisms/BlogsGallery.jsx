@@ -9,6 +9,7 @@ const BlogsGallery = ({ blogs }) => {
           key={blog.id}
           imageUrl={blog.imageUrl}
           altText={blog.title}
+          size="170"
         ></ThumbNail>
       ))}
     </Wrapper>
@@ -17,6 +18,7 @@ const BlogsGallery = ({ blogs }) => {
 
 const Wrapper = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 `;
 
