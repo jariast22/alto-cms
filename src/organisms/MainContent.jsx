@@ -1,5 +1,6 @@
 import Column from '@/molecules/Column';
 import styled from 'styled-components';
+import BlogsGallery from './BlogsGallery';
 import FeaturedBlog from './FeaturedBlog';
 
 const MainContent = () => (
@@ -29,6 +30,7 @@ const MainContent = () => (
         vel diam. Proin at ultrices libero, nec tincidunt est. Sed porta ex sit
         amet vulputate tristique."
       ></FeaturedBlog>
+      <BlogsGallery />
     </Column>
   </Wrapper>
 );
