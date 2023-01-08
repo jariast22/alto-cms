@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import NavBarLink from '@/atoms/NavBarLink';
 
 const NavBarMenu = () => (
-  <Wrapper>
+  <Wrapper aria-label="main">
     <NavBarLink path="/" label="Home"></NavBarLink>
     <NavBarLink path="/about" label="About"></NavBarLink>
     <NavBarLink path="/blog" label="Blog"></NavBarLink>
@@ -11,7 +11,7 @@ const NavBarMenu = () => (
   </Wrapper>
 );
 
-const Wrapper = styled.ul`
+const Wrapper = styled.nav`
   display: flex;
   gap: 20px;
   list-style: none;

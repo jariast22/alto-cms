@@ -13,14 +13,15 @@ const NavBar = () => (
   </Wrapper>
 );
 
-const Wrapper = styled.div`
+const Wrapper = styled.header`
   align-items: end;
   border-bottom: 3px solid ${COLORS.black};
   display: flex;
   height: 60px;
   gap: 40px;
   justify-content: space-between;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 `;
 
 export default NavBar;
