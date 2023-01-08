@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { Link } from 'react-router-dom';
+import { COLORS } from '@/constants';
 
 const NavBarLink = ({ path, label }) => (
   <Wrapper>
@@ -9,17 +10,14 @@ const NavBarLink = ({ path, label }) => (
 );
 
 const Wrapper = styled.li`
-  &:not(:last-child) {
-    margin-right: 20px;
-  }
   a {
-    color: black;
-    font-size: 24px;
+    color: ${COLORS.gray900};
+    font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
 
     &:hover {
-      color: #ccc;
+      color: ${COLORS.gray700};
     }
   }
 `;

@@ -13,6 +13,7 @@ const NavBarMenu = () => (
 
 const Wrapper = styled.ul`
   display: flex;
+  gap: 20px;
   list-style: none;
   margin: 0;
   margin-right: auto;

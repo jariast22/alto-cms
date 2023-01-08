@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Logo from '@/molecules/Logo';
 import NavBarMenu from '@/molecules/NavBarMenu';
 import Search from '@/molecules/Search';
+import { COLORS } from '@/constants';
 
 const NavBar = () => (
   <Wrapper>
@@ -14,7 +15,7 @@ const NavBar = () => (
 
 const Wrapper = styled.div`
   align-items: end;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid ${COLORS.black};
   display: flex;
   height: 60px;
   gap: 40px;
