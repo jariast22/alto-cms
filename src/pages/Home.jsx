@@ -9,7 +9,7 @@ const Home = ({ blogs }) => (
   </Wrapper>
 );
 
-const Wrapper = styled.div`
+const Wrapper = styled.main`
   /* display: flex; */
 `;
 
