@@ -12,7 +12,7 @@ const App = () => {
   useEffect(() => {
     const blogsInStorage = localStorage.getItem('blogs');
     if (blogsInStorage) {
-      setBlogs(blogsInStorage);
+      setBlogs(JSON.parse(blogsInStorage));
     } else {
       localStorage.setItem('blogs', JSON.stringify(blogsSeed));
       setBlogs(blogsSeed);
@@ -23,7 +23,7 @@ const App = () => {
     <Wrapper>
       <NavBar></NavBar>
       <Hero></Hero>
-      <MainContent></MainContent>
+      <MainContent blogs={blogs}></MainContent>
     </Wrapper>
   );
 };

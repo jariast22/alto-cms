@@ -1,11 +1,11 @@
 import ThumbNail from '@/molecules/ThumbNail';
 import styled from 'styled-components';
 
-const FeaturedBlog = ({ imageUrl, altText, summary }) => (
+const FeaturedBlog = ({ blog }) => (
   <Wrapper>
-    <ThumbNail imageUrl={imageUrl} altText={altText} />
+    <ThumbNail imageUrl={blog.imageUrl} altText={blog.title} />
     <div>
-      <p>{summary}</p>
+      <p>{blog.summary}</p>
     </div>
   </Wrapper>
 );
