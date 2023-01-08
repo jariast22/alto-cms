@@ -4,10 +4,13 @@ import Logo from '@/molecules/Logo';
 import NavBarMenu from '@/molecules/NavBarMenu';
 import Search from '@/molecules/Search';
 import { COLORS } from '@/constants';
+import Navigate from '@/atoms/Navigate';
 
 const NavBar = () => (
   <Wrapper>
-    <Logo></Logo>
+    <Navigate path="">
+      <Logo />
+    </Navigate>
     <NavBarMenu></NavBarMenu>
     <Search></Search>
   </Wrapper>

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import Icon from '@/atoms/Icon';
 
-const Logo = () => (
+const Logo = ({ handleClick }) => (
   <Wrapper>
     <Icon id={'pocket'} size={60}></Icon>
     Pocket Blogs
@@ -12,6 +12,7 @@ const Logo = () => (
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
+  cursor: pointer;
 `;
 
 export default Logo;
