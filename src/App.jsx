@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { Routes, Route, Outlet } from 'react-router-dom';
 
 import { blogsSeed } from './blogs';
 import { QUERIES } from './constants';
 import NavBar from '@/organisms/NavBar';
 import Home from '@pages/Home';
+import ErrorPage from './pages/error-page';
 
 const App = () => {
   const [blogs, setBlogs] = useState([]);
@@ -22,7 +24,11 @@ const App = () => {
   return (
     <Wrapper>
       <NavBar></NavBar>
-      <Home blogs={blogs}></Home>
+      <Routes>
+        <Route index element={<Home blogs={blogs} />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+      <Outlet />
     </Wrapper>
   );
 };
