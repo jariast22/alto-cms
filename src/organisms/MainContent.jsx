@@ -1,7 +1,8 @@
-import Column from '@/molecules/Column';
 import styled from 'styled-components';
-import BlogsGallery from './BlogsGallery';
-import FeaturedBlog from './FeaturedBlog';
+
+import Column from '@/molecules/Column';
+import BlogsGallery from '@/molecules/BlogsGallery';
+import FeaturedBlog from '@/molecules/FeaturedBlog';
 
 const MainContent = ({ blogs }) => {
   if (blogs.length <= 0) {

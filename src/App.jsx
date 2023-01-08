@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+
 import { blogsSeed } from './blogs';
 import { QUERIES } from './constants';
-import Hero from './molecules/Hero';
-import MainContent from './organisms/MainContent';
-import NavBar from './organisms/NavBar';
+import NavBar from '@/organisms/NavBar';
+import Home from '@pages/Home';
 
 const App = () => {
   const [blogs, setBlogs] = useState([]);
@@ -22,8 +22,7 @@ const App = () => {
   return (
     <Wrapper>
       <NavBar></NavBar>
-      <Hero></Hero>
-      <MainContent blogs={blogs}></MainContent>
+      <Home blogs={blogs}></Home>
     </Wrapper>
   );
 };

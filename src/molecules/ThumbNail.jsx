@@ -1,5 +1,6 @@
-import ThumbNailImage from '@/atoms/ThumbNailImage';
 import styled from 'styled-components';
+
+import ThumbNailImage from '@/atoms/ThumbNailImage';
 
 const ThumbNail = ({ imageUrl, altText, size = 200 }) => (
   <Wrapper
