@@ -4,11 +4,11 @@ import Label from '@/atoms/Label';
 import SearchInput from '@/atoms/SearchInput';
 import Button from '@/atoms/Button';
 
-const Search = () => (
+const Search = ({ blogs }) => (
   <Wrapper>
     <Label>Search The Site</Label>
     <InputWrapper>
-      <SearchInput placeholder="Enter Keyword"></SearchInput>
+      <SearchInput blogs={blogs} placeholder="Enter Keyword"></SearchInput>
       <Button>Search</Button>
     </InputWrapper>
   </Wrapper>

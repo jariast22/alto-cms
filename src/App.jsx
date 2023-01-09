@@ -45,7 +45,7 @@ const App = () => {
 
   return (
     <Wrapper>
-      <NavBar></NavBar>
+      <NavBar blogs={blogs}></NavBar>
       <Routes>
         <Route index element={<Home blogs={blogs} />} />
         <Route path="blog/:id" element={<Blog blog={blog} />} />

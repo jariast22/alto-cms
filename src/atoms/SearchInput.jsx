@@ -1,19 +1,24 @@
-import { COLORS } from '@/constants';
-import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
+import { Hint } from 'react-autocomplete-hint';
 
-const SearchInput = (props) => <Wrapper {...props}></Wrapper>;
+/* In hindsight the Hint component was a bad choice
+  Is not easily customizable, doesn't support styled components, etc.
+*/
 
-const Wrapper = styled.input`
-  background-color: ${COLORS.black};
-  box-sizing: border-box;
-  border: 0;
-  color: ${COLORS.gray50};
-  height: 100%;
+const SearchInput = ({ blogs = [] }) => {
+  const navigate = useNavigate();
+  const options =
+    blogs && blogs.map((blog) => ({ id: blog.id, label: blog.title }));
 
-  &::placeholder {
-    color: ${COLORS.gray300};
-    text-transform: uppercase;
-  }
-`;
+  const handleFill = (option) => {
+    navigate(`blog/${option.id}`);
+  };
+
+  return (
+    <Hint options={options} onFill={handleFill}>
+      <input className="input-with-hint" />
+    </Hint>
+  );
+};
 
 export default SearchInput;

@@ -6,13 +6,13 @@ import Search from '@/molecules/Search';
 import { COLORS } from '@/constants';
 import Navigate from '@/atoms/Navigate';
 
-const NavBar = () => (
+const NavBar = ({ blogs }) => (
   <Wrapper>
     <Navigate path="">
       <Logo />
     </Navigate>
     <NavBarMenu></NavBarMenu>
-    <Search></Search>
+    <Search blogs={blogs}></Search>
   </Wrapper>
 );
 
