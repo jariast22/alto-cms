@@ -12,6 +12,8 @@ const Blog = ({ blog }) => {
   );
 };
 
-const Wrapper = styled.main``;
+const Wrapper = styled.main`
+  padding-top: 20px;
+`;
 
 export default Blog;

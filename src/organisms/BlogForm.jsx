@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import DOMPurify from 'dompurify';
 import { useNavigate } from 'react-router-dom';
@@ -7,28 +7,45 @@ import Button from '@/atoms/Button';
 import InputWithLabel from '@/molecules/InputWithLabel';
 import styled from 'styled-components';
 
-const BlogForm = ({ handleBlogCreation }) => {
+const BlogForm = ({ blog, handleBlogCreation }) => {
   const navigate = useNavigate();
 
   const [title, setTitle] = useState('');
   const [imageUrl, setImageUrl] = useState('');
   const [summary, setSummary] = useState('');
   const [content, setContent] = useState('');
+  const [isEditing, setIsEditing] = useState(false);
+
+  useEffect(() => {
+    if (blog) {
+      setIsEditing(true);
+      setTitle(blog.title);
+      setImageUrl(blog.imageUrl);
+      setSummary(blog.summary);
+      setContent(blog.content);
+    }
+  }, [blog]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const generatedId = uuidv4();
+    let id;
+    if (!isEditing) {
+      id = uuidv4();
+    } else {
+      id = blog.id;
+    }
+
     const sanitizedContent = DOMPurify.sanitize(content);
 
     const newBlog = {
-      id: generatedId,
+      id,
       title,
-      conent: sanitizedContent,
+      content: sanitizedContent,
       summary,
       imageUrl,
     };
-    handleBlogCreation(newBlog);
+    handleBlogCreation(newBlog, isEditing);
     navigate('/');
   };
 

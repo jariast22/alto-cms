@@ -13,8 +13,13 @@ import BlogEdit from '@pages/BlogEdit';
 const App = () => {
   const [blogs, setBlogs] = useState([]);
   const match = useMatch('/blog/:id');
+  const matchEdit = useMatch('editBlog/:id');
+  console.log('Match Edit', matchEdit);
 
   const blog = match ? blogs.find((blog) => blog.id === match.params.id) : null;
+  const blogToEdit = matchEdit
+    ? blogs.find((blog) => blog.id === matchEdit.params.id)
+    : null;
 
   useEffect(() => {
     const blogsInStorage = localStorage.getItem('blogs');
@@ -26,9 +31,14 @@ const App = () => {
     }
   }, []);
 
-  const onBlogCreation = (newBlog) => {
+  const onBlogCreation = (newBlog, isEditing) => {
     localStorage.clear();
-    const newBlogs = blogs.concat(newBlog);
+    let newBlogs;
+    if (isEditing) {
+      newBlogs = blogs.map((blog) => (blog.id === newBlog.id ? newBlog : blog));
+    } else {
+      newBlogs = blogs.concat(newBlog);
+    }
     localStorage.setItem('blogs', JSON.stringify(newBlogs));
     setBlogs(newBlogs);
   };
@@ -40,8 +50,10 @@ const App = () => {
         <Route index element={<Home blogs={blogs} />} />
         <Route path="blog/:id" element={<Blog blog={blog} />} />
         <Route
-          path="editBlog"
-          element={<BlogEdit handleBlogCreation={onBlogCreation} />}
+          path="editBlog/:id?"
+          element={
+            <BlogEdit blog={blogToEdit} handleBlogCreation={onBlogCreation} />
+          }
         />
         <Route path="*" element={<ErrorPage />} />
       </Routes>

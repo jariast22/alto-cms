@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Search, AtSign, ChevronDown, Pocket } from 'react-feather';
+import { Search, AtSign, ChevronDown, Pocket, Edit } from 'react-feather';
 
 const icons = {
   search: Search,
   pocket: Pocket,
+  edit: Edit,
   'at-sign': AtSign,
   'chevron-down': ChevronDown,
 };

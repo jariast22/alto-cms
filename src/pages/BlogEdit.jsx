@@ -1,9 +1,9 @@
 import BlogForm from '@/organisms/BlogForm';
 import styled from 'styled-components';
 
-const BlogEdit = ({ handleBlogCreation }) => (
+const BlogEdit = ({ blog, handleBlogCreation }) => (
   <Wrapper>
-    <BlogForm handleBlogCreation={handleBlogCreation} />
+    <BlogForm handleBlogCreation={handleBlogCreation} blog={blog} />
   </Wrapper>
 );
 

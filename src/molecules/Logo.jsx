@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import Icon from '@/atoms/Icon';
 
-const Logo = ({ handleClick }) => (
+const Logo = () => (
   <Wrapper>
     <Icon id={'pocket'} size={60}></Icon>
     Pocket Blogs
