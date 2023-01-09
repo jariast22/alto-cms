@@ -5,7 +5,6 @@ import NavBarLink from '@/atoms/NavBarLink';
 const NavBarMenu = () => (
   <Wrapper aria-label="main">
     <NavBarLink path="/" label="Home"></NavBarLink>
-    <NavBarLink path="/about" label="About"></NavBarLink>
     <NavBarLink path="/editBlog" label="Blog"></NavBarLink>
     <NavBarLink path="/contact" label="Contact"></NavBarLink>
   </Wrapper>

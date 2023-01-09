@@ -9,6 +9,7 @@ import Home from '@pages/Home';
 import ErrorPage from '@pages/error-page';
 import Blog from '@pages/Blog';
 import BlogEdit from '@pages/BlogEdit';
+import Contact from '@pages/Contact';
 
 const App = () => {
   const [blogs, setBlogs] = useState([]);
@@ -55,6 +56,7 @@ const App = () => {
             <BlogEdit blog={blogToEdit} handleBlogCreation={onBlogCreation} />
           }
         />
+        <Route path="contact" element={<Contact />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Outlet />
