@@ -15,15 +15,15 @@ const Search = ({ blogs }) => (
 );
 
 const Wrapper = styled.div`
-  height: 100%;
   display: flex;
   flex-direction: column;
+  height: 100%;
 `;
 
 const InputWrapper = styled.div`
   display: flex;
-  gap: 4px;
   flex-grow: 1;
+  gap: 4px;
 `;
 
 export default Search;

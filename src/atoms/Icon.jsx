@@ -31,8 +31,8 @@ const Icon = ({ id, size, strokeWidth = 1, ...props }) => {
 };
 
 const Wrapper = styled.div`
-  width: var(--size);
   height: var(--size);
+  width: var(--size);
   & > svg {
     display: block;
     stroke-width: var(--stroke-width);

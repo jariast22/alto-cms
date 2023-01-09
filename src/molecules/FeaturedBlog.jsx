@@ -11,8 +11,8 @@ const FeaturedBlog = ({ blog }) => (
 );
 
 const Wrapper = styled.div`
-  display: flex;
   align-items: center;
+  display: flex;
   gap: 20px;
 `;
 

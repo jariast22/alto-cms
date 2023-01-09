@@ -13,13 +13,13 @@ const ThumbNail = ({ imageUrl, altText, size = 200 }) => (
 );
 
 const Wrapper = styled.div`
-  display: inline-block;
-  width: var(--size);
-  height: var(--size);
-  overflow: hidden;
   border-radius: 4px;
-  min-width: var(--size);
   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.8);
+  display: inline-block;
+  height: var(--size);
+  min-width: var(--size);
+  overflow: hidden;
+  width: var(--size);
 `;
 
 export default ThumbNail;

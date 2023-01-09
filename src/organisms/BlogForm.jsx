@@ -88,11 +88,11 @@ const BlogForm = ({ blog, handleBlogCreation }) => {
 };
 
 const Wrapper = styled.form`
+  align-items: center;
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding-top: 40px;
-  align-items: center;
   width: fit-content;
 `;
 

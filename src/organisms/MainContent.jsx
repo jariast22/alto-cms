@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import Column from '@/molecules/Column';
 import BlogsGallery from '@/organisms/BlogsGallery';
-import FeaturedBlog from '@/organisms/FeaturedBlog';
+import FeaturedBlog from '@/molecules/FeaturedBlog';
 
 const MainContent = ({ blogs }) => {
   if (blogs.length <= 0) {

@@ -10,12 +10,11 @@ const HeroText = ({ heading, content }) => (
 
 const Wrapper = styled.div`
   color: ${COLORS.gray50};
-
-  text-align: center;
   font-size: 1rem;
   font-weight: bold;
   padding: 10px;
   max-width: 300px;
+  text-align: center;
 `;
 
 const Heading = styled.h4`

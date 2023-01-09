@@ -14,9 +14,9 @@ const AboutUs = () => (
 );
 
 const Wrapper = styled.div`
+  background-color: ${COLORS.gray300};
   flex: 1.5;
   padding: 20px;
-  background-color: ${COLORS.gray300};
 `;
 
 const Text = styled.p`

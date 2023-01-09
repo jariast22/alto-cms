@@ -13,9 +13,9 @@ const NavBarMenu = () => (
 const Wrapper = styled.nav`
   display: flex;
   gap: 20px;
-  list-style: none;
   margin: 0;
   margin-right: auto;
+  list-style: none;
   padding: 0;
 `;
 

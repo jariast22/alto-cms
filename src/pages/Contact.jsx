@@ -10,9 +10,9 @@ const Contact = () => (
 );
 
 const Wrapper = styled.div`
-  padding: 20px;
   display: flex;
   height: 100%;
+  padding: 20px;
 `;
 
 export default Contact;

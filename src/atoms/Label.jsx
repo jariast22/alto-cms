@@ -5,7 +5,7 @@ const Label = ({ size = '1', children }) => (
 );
 
 const Wrapper = styled.span`
-  text-transform: uppercase;
   font-size: var(--size);
+  text-transform: uppercase;
 `;
 export default Label;
